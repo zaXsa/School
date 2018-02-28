@@ -1,29 +1,32 @@
 #include <iostream>
+#include <stdbool.h>
+#include <stdio.h>
 
 using namespace std;
 
-int main()
-{
-    int feet, inch, pounds;
-    float length, weight;
-    float BMI;
+bool isInt(const char str[]);
 
-    cout << "Give your length in feet:\t";
-    cin >> feet;
-    cout << "Give your length in inches:\t";
-    cin >> inch;
-    cout << "Give your weigth in pounds:\t";
-    cin >> pounds;
-    cout << endl;
+int main(int argc, char *argv[]){
+    bool isTrue = true;
+    int i;
 
-    feet *= 12;
-    length = feet + inch;
-    length *= 2.54;
-    length /= 100;
-    weight = pounds / 2.2;
+    for (i=1;i<argc;i++){
+        isTrue = isInt(argv[i]);
+        isTrue ? cout << "True" << endl : cout << "False" << endl;
+    }
+}
 
-    BMI = weight/(length*length);
-    cout << "Your BMI is:\t" << BMI << endl;
-
-    return 0;
+bool isInt(const char str[]){
+    int i = 0;
+    bool isInteger = true;
+    if (str[0] == '-' || str[0] == '+')
+        i++;
+    while (str[i] != '\0'){
+        if (! isdigit(str[i])){
+            isInteger = false;
+            break;
+        }
+        i++;
+    }
+    return isInteger ;
 }

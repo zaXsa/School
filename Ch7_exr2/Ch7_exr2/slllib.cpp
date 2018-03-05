@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 #include "slllib.h"
+#include "queue.h"
 
 /* Shows the contents of all nodes from the head to the end of the list */
 void showSLL(const node_t *pHead){
@@ -36,7 +36,7 @@ int sizeSLL(const node_t *pHead){
 }
 
 /* Adds data to a new node at the end of the SLL */
-void addSLL(node_t **ppHead, int data){
+void addSLL(node_t **ppHead, data_t data){
     node_t *pNext = *ppHead;
     node_t *pNew = (node_t*)malloc(sizeof(node_t));
 
@@ -69,15 +69,6 @@ void emptySLL(node_t **ppHead){
     }
     *ppHead = NULL;
 }
-
-bool isEmptySLL (const node_t *pHead){
-    return sizeSLL(pHead) == 0;
-}
-
-//bool isEmptySLL (const node_t *pHead){
-//    return pHead == NULL;
-//}
-
 
 //void removeSLL(node_t *pHead, int Amount){
 //    node_t *pToBeRemoved = pHead;

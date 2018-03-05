@@ -4,13 +4,11 @@
 using namespace std;
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 #include "slllib.h"
 
 int main(void){
     int Amount = 0;
-    bool IsEmpty = true;
 
     node_t *pHead = NULL;  /* Create an empty SLL, pHead is the 'owner' of the SLL */
     showSLL(pHead);
@@ -20,10 +18,6 @@ int main(void){
     addSLL(&pHead, 10);
     showSLL(pHead);
     printf("Size of the SLL = %lu\n\n", sizeSLL(pHead));
-
-    IsEmpty = isEmptySLL(pHead);
-    cout << "The SLL of pHead is empty:\t";
-    IsEmpty ? cout << "True" << endl: cout << "False" << endl << endl;
 
     printf("Add new node to the SLL 0x%p:\n", pHead);
     addSLL(&pHead, 20);
@@ -49,10 +43,6 @@ int main(void){
     emptySLL(&pHead);
     showSLL(pHead);
     printf("Size of the SLL = %lu\n\n", sizeSLL(pHead));
-
-    IsEmpty = isEmptySLL(pHead);
-    cout << "The SLL of pHead is empty:\t";
-    IsEmpty ? cout << "True" << endl: cout << "False" << endl << endl;
 
     printf("Add new node to the SLL 0x%p:\n", pHead);
     addSLL(&pHead, 70);

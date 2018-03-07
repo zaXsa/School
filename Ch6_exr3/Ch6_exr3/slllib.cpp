@@ -81,13 +81,30 @@ bool isEmptySLL (const node_t *pHead){
 
 //void removeSLL(node_t *pHead, int Amount){
 //    node_t *pToBeRemoved = pHead;
+//    node_t *pBeforeSafe;
+//    node_t *pBeforeNode = pToBeRemoved;
 //    int count = 0;
 
-//    while (count == Amount){
+//    while (count != Amount + 1){
 //        pToBeRemoved = pToBeRemoved->pNextNode;
+//        if (pToBeRemoved == NULL){
+//            break;
+//        }
 //        count++;
+//        if (count == (Amount - 1)){
+//             pBeforeNode = pToBeRemoved->pNextNode;
+//        }
 //    }
+
+//    count = 0;
+
+//    while (count != (Amount)){
+//       pBeforeNode = pBeforeNode->pNextNode;
+//    }
+
 //    if (pToBeRemoved != NULL){
 //        free(pToBeRemoved);
 //    }
+
+//    pBeforeNode = pBeforeSafe->pNextNode;
 //}

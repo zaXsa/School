@@ -72,13 +72,20 @@ void emptySLL(node_t **ppHead){
 
 //void removeSLL(node_t *pHead, int Amount){
 //    node_t *pToBeRemoved = pHead;
+//    node_t *pBeforeNote;
 //    int count = 0;
 
-//    while (count == Amount){
+//    while (count != Amount){
 //        pToBeRemoved = pToBeRemoved->pNextNode;
 //        count++;
+//        if (count == (Amount - 1)){
+//             pBeforeNote = pToBeRemoved->pNextNode;
+//        }
 //    }
+//
 //    if (pToBeRemoved != NULL){
 //        free(pToBeRemoved);
 //    }
+//
+//    pToBeRemoved = pBeforeNote->pNextNote;
 //}

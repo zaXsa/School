@@ -16,6 +16,9 @@ int main(){
     int i = 0;
 
     t_PostCode PostCodes[6] = {{1234,"AB"},{6714,"CC"},{4214,"FA"},{1231,"HJ"},{1234,"AA"},{1234,"AC"}};
+
+    PostCodes[1].Numb = 5;
+
     for(i=0;i<6;i++){
         cout << PostCodes[i].Numb << " " << PostCodes[i].Letter << endl;
     }

@@ -6,6 +6,7 @@ using namespace std;
 #include <stdlib.h>
 
 #include "slllib.h"
+#include "queue.h"
 
 int main(void){
     int Amount = 0;

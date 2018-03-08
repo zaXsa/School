@@ -35,10 +35,10 @@ int main(void){
     showSLL(pHead);
     printf("Size of the SLL = %lu\n\n", sizeSLL(pHead));
 
-//    cout << "remove one test:\t";
-//    cin >> Amount;
-//    cout << endl;
-//    removeSLL(pHead, Amount);
+    cout << "remove one test:\t";
+    cin >> Amount;
+    cout << endl;
+    removeSLL(&pHead, Amount);
 
     printf("Add new node to the SLL 0x%p:\n", pHead);
     addSLL(&pHead, 70);

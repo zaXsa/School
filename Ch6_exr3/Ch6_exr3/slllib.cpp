@@ -79,32 +79,26 @@ bool isEmptySLL (const node_t *pHead){
 //}
 
 
-//void removeSLL(node_t *pHead, int Amount){
-//    node_t *pToBeRemoved = pHead;
-//    node_t *pBeforeSafe;
-//    node_t *pBeforeNode = pToBeRemoved;
-//    int count = 0;
+void removeSLL(node_t **pHead, int Amount){
+    node_t *pToBeRemoved = *pHead;
+    node_t *pToSafed = *pHead;
+    node_t *pNext = NULL;
+    int i;
+    int size = (sizeSLL(*pHead)) - 1;
 
-//    while (count != Amount + 1){
-//        pToBeRemoved = pToBeRemoved->pNextNode;
-//        if (pToBeRemoved == NULL){
-//            break;
-//        }
-//        count++;
-//        if (count == (Amount - 1)){
-//             pBeforeNode = pToBeRemoved->pNextNode;
-//        }
-//    }
+    if(Amount > 0 && Amount < size){
+        for (i=0;i<Amount;i++){
+            pNext = pToBeRemoved->pNextNode;
+            pToBeRemoved = pNext;
+        }
+        for (i=0;i<Amount-1;i++){
+            pNext = pToSafed->pNextNode;
+            pToSafed = pNext;
+        }
+        if (pToBeRemoved != NULL){
+            pToSafed->pNextNode = pToBeRemoved->pNextNode;
+            free(pToBeRemoved);
+        }
+    }
+}
 
-//    count = 0;
-
-//    while (count != (Amount)){
-//       pBeforeNode = pBeforeNode->pNextNode;
-//    }
-
-//    if (pToBeRemoved != NULL){
-//        free(pToBeRemoved);
-//    }
-
-//    pBeforeNode = pBeforeSafe->pNextNode;
-//}

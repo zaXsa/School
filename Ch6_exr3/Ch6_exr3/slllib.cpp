@@ -84,7 +84,7 @@ void removeSLL(node_t **pHead, int Amount){
     node_t *pToSafed = *pHead;
     node_t *pNext = NULL;
     int i;
-    int size = (sizeSLL(*pHead)) - 1;
+    int size = (sizeSLL(*pHead));
 
     if(Amount > 0 && Amount < size){
         for (i=0;i<Amount;i++){
@@ -98,6 +98,16 @@ void removeSLL(node_t **pHead, int Amount){
         if (pToBeRemoved != NULL){
             pToSafed->pNextNode = pToBeRemoved->pNextNode;
             free(pToBeRemoved);
+        }
+    }
+    if(Amount == 0){
+        for (i=0;i<Amount+1;i++){
+            pNext = pToSafed->pNextNode;
+            pToSafed = pNext;
+        }
+        if (pToBeRemoved != NULL){
+            free(pToBeRemoved);
+            *pHead = pToSafed;
         }
     }
 }

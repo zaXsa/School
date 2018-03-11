@@ -1,57 +1,67 @@
-/* Singly Linked List: SLL */
 #include <iostream>
 
 using namespace std;
+
+#include "queue.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "slllib.h"
-#include "queue.h"
+int main(void)
+{
+    data_t data = {1, "Hello queue"};
+    /* Create empty queue, pBack = NULL */
+    queue_t queue = {NULL};
 
-int main(void){
-    int Amount = 0;
+    showQueue(&queue);
+    printf("\nCreate queue\n");
+    createQueue(&queue, data);
+    showQueue(&queue);
 
-    node_t *pHead = NULL;  /* Create an empty SLL, pHead is the 'owner' of the SLL */
-    showSLL(pHead);
-    printf("Size of the SLL = %lu\n", sizeSLL(pHead));
+    data.intVal++;
+    printf("\nAdd new data to queue\n");
+    pushQueue(&queue, data);
+    showQueue(&queue);
+    cout << endl << "Contains:\t" << sizeQueue(&queue) << endl;
 
-    printf("\nAdd new node to the SLL 0x%p:\n", pHead);
-    addSLL(&pHead, 10);
-    showSLL(pHead);
-    printf("Size of the SLL = %lu\n\n", sizeSLL(pHead));
+    data.intVal++;
+    printf("\nAdd new data to queue\n");
+    pushQueue(&queue, data);
+    showQueue(&queue);
 
-    printf("Add new node to the SLL 0x%p:\n", pHead);
-    addSLL(&pHead, 20);
-    showSLL(pHead);
-    printf("Size of the SLL = %lu\n\n", sizeSLL(pHead));
+    data.intVal++;
+    printf("\nAdd new data to queue\n");
+    pushQueue(&queue, data);
+    showQueue(&queue);
+    cout << endl << "Contains:\t" << sizeQueue(&queue) << endl;
 
-    printf("Add new node to the SLL 0x%p:\n", pHead);
-    addSLL(&pHead, 50);
-    showSLL(pHead);
-    printf("Size of the SLL = %lu\n\n", sizeSLL(pHead));
+    if(!emptyQueue(&queue))
+    {
+        printf("\nFront iValue: %d\n", frontQueue(&queue)->intVal);
+        printf("Front text:   %s\n", frontQueue(&queue)->text);
+        printf("Back  iValue: %d\n", backQueue(&queue)->intVal);
+        printf("Back  text:   %s\n", backQueue(&queue)->text);
+    }
 
-//    cout << "remove one test:\t";
-//    cin >> Amount;
-//    cout << endl;
-//    removeSLL(pHead, Amount);
+    cout << endl << "Contains:\t" << sizeQueue(&queue) << endl;
 
-    printf("Add new node to the SLL 0x%p:\n", pHead);
-    addSLL(&pHead, 70);
-    showSLL(pHead);
-    printf("Size of the SLL = %lu\n\n", sizeSLL(pHead));
-
-    printf("Delete the SLL 0x%p (clear the contents):\n", pHead);
-    emptySLL(&pHead);
-    showSLL(pHead);
-    printf("Size of the SLL = %lu\n\n", sizeSLL(pHead));
-
-    printf("Add new node to the SLL 0x%p:\n", pHead);
-    addSLL(&pHead, 70);
-    addSLL(&pHead, 10);
-    addSLL(&pHead, 50);
-    addSLL(&pHead, 60);
-    showSLL(pHead);
-    printf("Size of the SLL = %lu\n\n", sizeSLL(pHead));
+    printf("\nPop queue\n");
+    popQueue(&queue);
+    showQueue(&queue);
+    cout << endl << "Contains:\t" << sizeQueue(&queue) << endl;
+    printf("\nPop queue\n");
+    popQueue(&queue);
+    showQueue(&queue);
+    cout << endl << "Contains:\t" << sizeQueue(&queue) << endl;
+    printf("\nPop queue\n");
+    popQueue(&queue);
+    showQueue(&queue);
+    printf("\nPop queue\n");
+    popQueue(&queue);
+    showQueue(&queue);
+    printf("\nPop queue\n");
+    popQueue(&queue);
+    showQueue(&queue);
+    printf("\n");
 
     return 0;
 }

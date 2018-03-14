@@ -8,7 +8,7 @@ using namespace std;
 #include "slllib.h"
 
 int main(void){
-    int Amount = 0;
+//    int Amount = 0;
 
     node_t *pHead = NULL;  /* Create an empty SLL, pHead is the 'owner' of the SLL */
     showSLL(pHead);

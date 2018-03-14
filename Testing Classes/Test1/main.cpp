@@ -6,9 +6,11 @@ class CRectangle {
     int width, height;
 public:
     void set_values (int, int);
+
+    ~CRectangle(){cout << "Apple" << endl;}
+    CRectangle(){cout << "Fruit" << endl;}
     int area (void) {return (width * height);}
 };
-
 void CRectangle::set_values (int a, int b) {
     width = a;
     height = b;
@@ -17,7 +19,7 @@ void CRectangle::set_values (int a, int b) {
 int main () {
     CRectangle a, *b, *c;
     CRectangle * d = new CRectangle[2];
-    b= new CRectangle;
+    b = new CRectangle;
 
     c= &a;
     a.set_values (10,2);

@@ -16,10 +16,26 @@ void CRectangle::set_values (int a, int b) {
     height = b;
 }
 
-int main () {
+class Daughter: public CRectangle{
+public:
+    Daughter(int a,int b){
+        set_values(a,b);
+    }
+    Daughter(int i){
+        cout <<"Daughter "<<i<<endl;
+    }
+
+    ~Daughter(){
+    }
+};
+
+int main (){
     CRectangle a, *b, *c;
     CRectangle * d = new CRectangle[2];
     b = new CRectangle;
+
+    Daughter j(3,5);
+    cout << j.area() << endl;
 
     c= &a;
     a.set_values (10,2);

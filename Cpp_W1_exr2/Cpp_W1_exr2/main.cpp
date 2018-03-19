@@ -12,37 +12,41 @@ int main(){
     bool Read = false;
     ofstream BoolTest;
     ifstream OtherTest;
+    string text;
 
-    BoolTest.open("Texted.txt");
-    BoolTest << Bool;
-    BoolTest.close();
-
-    OtherTest.open("Texted.txt");
-    OtherTest >> Read;
-    OtherTest.close();
-
-    cout << Read;
-
-    cout << "Nummber\t|" << endl;
+    cout << "Input\t\t\t|" << endl;
+    cout << "a" << "\t" << "b" << "\t" << "c" << "\t|\t" << "answer" << endl;
     cout << string(60, '-') << endl;
-
-
 
     for(i=0;i<2;i++){
         for(j=0;j<2;j++){
             for(k=0;k<2;k++){
                 Bool = (i  &&  j) || !k;
-                cout << i << " " << j << " " << k<< "\t|\t" << Bool << endl;
+                cout << std::boolalpha << (bool)i << "\t" << (bool)j << "\t" << (bool)k << "\t|\t" << Bool << endl;
             }
         }
     }
-    a = true;
-    b = false;
-    c = false;
+    cout << string(60, '-') << endl;
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++){
+            for(k=0;k<2;k++){
+                Bool = (i  &&  j) || !k;
+                cout << std::noboolalpha << i << "\t" << j << "\t" << k<< "\t|\t" << Bool << endl;
+            }
+        }
+    }
+    cout << string(60, '-') << endl;
+
+    cin >> text;
+    cout << "Checking for document:\t" << text << endl;
+
+    OtherTest.open(text);
+    OtherTest >> a >> b >> c;
+    OtherTest.close();
 
     Bool = logicFunction(a,b,c);
+    cout << a << "\t" << b << "\t" << c << "\t|\t" << Bool << endl;
 
-    cout << Bool << endl;
     return 0;
 }
 

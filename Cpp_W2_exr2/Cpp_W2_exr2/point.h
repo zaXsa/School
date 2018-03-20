@@ -10,6 +10,7 @@ public:
     point(const double, const double, const string);
     void showxy();
     void setxy(const double, const double);
+    void givexy(double *, double *);
 private:
     double x,y;
     string ID;

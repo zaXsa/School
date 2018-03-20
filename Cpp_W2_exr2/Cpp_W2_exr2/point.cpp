@@ -21,3 +21,8 @@ void point::setxy(const double a, const double b){
     x = a;
     y = b;
 }
+
+void point::givexy(double *a, double *b){
+    *a = x;
+    *b = y;
+}

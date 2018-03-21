@@ -12,7 +12,7 @@ int main(){
     double number;
     double OtherNumber;
     int i,j;
-    fstream NewFile;
+    ofstream NewFile;
     string Apple;
     for(j=0;j<4;j++){
         do{

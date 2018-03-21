@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "slllib.h"
+#include "slllib.cpp"
 
 /* Shows the contents of all nodes from the head to the end of the list */
 void showSLL(const node_t *pHead){

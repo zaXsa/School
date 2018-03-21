@@ -11,8 +11,11 @@ int main(){
     SLL Test2(15);
 
     One[0].addNode(5);
-    One[1].addNode(10);
-    One[2].addNode();
+    One[1].addNode(5);
+    One[2].addNode((One[0].getdata(0,One[0].sizeSLL()))*(One[1].getdata(0,One[1].sizeSLL())));
+    One[2].showSLL();
+
+    cout << endl << endl;
 
     Test2.addNode(20);
     Test2.addNode(231);
@@ -33,3 +36,4 @@ int main(){
 
     return 0;
 }
+

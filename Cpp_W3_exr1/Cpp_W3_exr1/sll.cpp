@@ -87,6 +87,29 @@ int SLL::sizeSLL(){
     }
 }
 
+int SLL::getdata(int Amount,int size){
+    const node_t *pNext = pHead;
+    int data;
+
+    int i;
+
+    if(Amount > 0 && Amount < size){
+        for (i=0;i<Amount;i++){
+            pNext = pNext->pNextNode;
+        }
+        if (pNext != NULL){
+            data = pNext->data;
+            return data;
+        }
+    }
+    if(Amount == 0){
+        if (pNext != NULL){
+            data = pNext->data;
+            return data;
+        }
+    }
+}
+
 void SLL::removeSLL(int Amount, int size){
     node_t *pToBeRemoved = pHead;
     node_t *pToSafed = pHead;

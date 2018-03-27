@@ -47,7 +47,7 @@ int main(){
         OtherTest >> a >> b >> c;
         OtherTest.close();
         Bool = logicFunction(a,b,c);
-        cout << a << "\t" << b << "\t" << c << "\t|\t" << Bool << endl;
+        cout << setw(8) << a << setw(8) << b << setw(8) << c << setw(8) << "|" << setw(8) << Bool << endl;
     } else {
         cout << "you entered the wrong ducument" << endl;
     }

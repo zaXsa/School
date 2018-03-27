@@ -35,3 +35,15 @@ The squareroot of 6.00 is:	2.45
 The squareroot of 2.45 is:	1.57
 The squareroot of 1.57 is:	1.25
 The squareroot of 1.25 is:	1.12
+The squareroot of 6.00 is:	2.45
+The squareroot of 2.45 is:	1.57
+The squareroot of 1.57 is:	1.25
+The squareroot of 1.25 is:	1.12
+The squareroot of 7.00 is:	2.65
+The squareroot of 2.65 is:	1.63
+The squareroot of 1.63 is:	1.28
+The squareroot of 1.28 is:	1.13
+The squareroot of 6.00 is:	2.45
+The squareroot of 2.45 is:	1.57
+The squareroot of 1.57 is:	1.25
+The squareroot of 1.25 is:	1.12

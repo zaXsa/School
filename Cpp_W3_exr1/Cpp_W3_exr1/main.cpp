@@ -10,6 +10,8 @@ int main(){
     SLL Test1;
     SLL Test2(15);
 
+    int remove;
+
     One[0].addNode(5);
     One[1].addNode(5);
     One[2].addNode((One[0].getdata(0,One[0].sizeSLL()))*(One[1].getdata(0,One[1].sizeSLL())));
@@ -26,7 +28,8 @@ int main(){
     Test2.showSLL();
     cout << "Size of SLL: " << Test2.sizeSLL() << endl;
 
-    Test2.removeSLL(2,Test2.sizeSLL());
+    cin >> remove;
+    Test2.removeSLL(remove,Test2.sizeSLL());
     Test2.showSLL();
     cout << "Size of SLL: " << Test2.sizeSLL() << endl;
 

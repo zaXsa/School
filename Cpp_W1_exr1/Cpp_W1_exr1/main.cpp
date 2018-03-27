@@ -32,7 +32,6 @@ int main(){
             NewFile << std::fixed << std::setprecision(2) << "The squareroot of " << number  << " is:\t" << sqrt(number) << endl;
             NewFile.close();
             number = sqrt(number);
-            cout << Apple << OtherNumber;
         }
     }
     return 0;

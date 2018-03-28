@@ -5,6 +5,7 @@ using namespace std;
 
 SLL::SLL(){
 }
+
 SLL::SLL(int x){
     node_t *pNext = pHead;
     node_t *pNew = new node_t;
@@ -25,6 +26,8 @@ SLL::SLL(int x){
         pHead = pNew;
     }
 }
+
+SLL::~SLL(){}
 
 void SLL::showSLL(){
     const node_t *pNext = pHead;

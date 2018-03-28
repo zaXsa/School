@@ -19,6 +19,10 @@ int main(){
 
     cout << endl << endl;
 
+    Test1.showSLL();
+
+    cout << endl << endl;
+
     Test2.addNode(20);
     Test2.addNode(231);
     Test2.showSLL();
@@ -28,6 +32,7 @@ int main(){
     Test2.showSLL();
     cout << "Size of SLL: " << Test2.sizeSLL() << endl;
 
+    cout << "Enter a SLL part you want to remove:\t";
     cin >> remove;
     Test2.removeSLL(remove,Test2.sizeSLL());
     Test2.showSLL();

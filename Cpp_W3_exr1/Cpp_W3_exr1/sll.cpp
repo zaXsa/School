@@ -134,10 +134,8 @@ void SLL::removeSLL(int Amount, int size){
         }
     }
     if(Amount == 0){
-        for (i=0;i<Amount+1;i++){
             pNext = pToSafed->pNextNode;
             pToSafed = pNext;
-        }
         if (pToBeRemoved != NULL){
             delete(pToBeRemoved);
             pHead = pToSafed;

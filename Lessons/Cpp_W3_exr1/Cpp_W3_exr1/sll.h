@@ -10,6 +10,7 @@ class SLL{
 public:
     SLL();
     SLL(int);
+    ~SLL();
     void showSLL();                                             // Shows the entire SLL
     void addNode(int);                                          // Adds a node to the end of the SLL
     int sizeSLL();                                              // Gives the size of the SLL

@@ -5,6 +5,7 @@ using namespace std;
 
 SLL::SLL(){
 }
+
 SLL::SLL(int x){
     node_t *pNext = pHead;
     node_t *pNew = new node_t;
@@ -25,6 +26,8 @@ SLL::SLL(int x){
         pHead = pNew;
     }
 }
+
+SLL::~SLL(){}
 
 void SLL::showSLL(){
     const node_t *pNext = pHead;
@@ -131,10 +134,8 @@ void SLL::removeSLL(int Amount, int size){
         }
     }
     if(Amount == 0){
-        for (i=0;i<Amount+1;i++){
             pNext = pToSafed->pNextNode;
             pToSafed = pNext;
-        }
         if (pToBeRemoved != NULL){
             delete(pToBeRemoved);
             pHead = pToSafed;

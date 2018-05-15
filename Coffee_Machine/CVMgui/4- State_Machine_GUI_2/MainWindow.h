@@ -44,6 +44,10 @@
 #include "StateMachine.h"
 #include <QDialog>
 
+#include <iostream>
+#include <fstream>
+using namespace std;
+
 //QT_BEGIN_NAMESPACE
 class QAction;
 class QDialogButtonBox;
@@ -82,6 +86,7 @@ private:
    QGroupBox *horizontalGroupBox1;
    QGroupBox *horizontalGroupBox2;
    QGroupBox *horizontalGroupBox3;
+   QGroupBox *horizontalGroupBox4;
    QGroupBox *gridGroupBox;
 
    QTextEdit *display;
@@ -89,6 +94,7 @@ private:
 
    QPushButton *buttons[NumButtons];
    QPushButton *buttonss[NumButtons];
+   QPushButton *buttonsss[NumButtons];
 
    QDialogButtonBox *buttonBox;
 
@@ -101,16 +107,20 @@ private:
    StateMachine *pStateMachine;
    event_e event;
 
+   ofstream file1;
+
 private slots:
    void Loging();
    void coin5C();
    void coin10C();
    void coin20C();
    void coin50C();
+   void coin100C();
    void Drink1();
    void Drink2();
    void Drink3();
    void Cancel();
+   void coinWrong();
 };
 
 #endif // MAINWINDOW_H

@@ -1,6 +1,10 @@
 #include "MainWindow.h"
 #include "StateMachine.h"
 
+#include <unistd.h>
+#include <iostream>
+#include <fstream>
+using namespace std;
 //********************* Mealy Actions
 
 state_e StateMachine::ae_start(){
@@ -33,6 +37,16 @@ state_e StateMachine::ae_Cancel(){
     DrinkPrice = 0;
     return S_CHANGE;
 }
+state_e StateMachine::ae_coinWrong(){
+    pDialog->setLogger("\nwrong coin inserted, Dispencing wrong coin");
+
+    return S_CHECK_AMOUNT;
+}
+
+state_e StateMachine::ae_0_cents(){
+    money += 0;
+    return S_CHECK_AMOUNT;
+}
 
 state_e StateMachine::ae_5_cents(){
     money += 5;
@@ -54,6 +68,11 @@ state_e StateMachine::ae_50_cents(){
     return S_CHECK_AMOUNT;
 }
 
+state_e StateMachine::ae_100_cents(){
+    money += 100;
+    return S_CHECK_AMOUNT;
+}
+
 state_e StateMachine::ae_money_enough(){
     return S_COLA;
 }
@@ -72,7 +91,7 @@ event_e StateMachine::as_init(){
     money = 0.0;
     DrinkType = "Nothing";
     DrinkPrice = 0;
-    pDialog->setDisplay("\nEnter Drink choice");
+    pDialog->setDisplay("Enter Drink choice");
     pDialog->enableCentButtons(true);
     return E_SEQ;
 }
@@ -82,10 +101,8 @@ event_e StateMachine::as_wait_for_coins(){
 }
 
 event_e StateMachine::as_check_amount(){
-    pDialog->setLogger("\nAmount:\t");
-    pDialog->setLogger(QString::number(money));
-    pDialog->setLogger("\nNeed:\t");
-    pDialog->setLogger(QString::number(DrinkPrice));
+    pDialog->setLogger("\nAmount:\t"+QString::number(money)+"\nNeed:\t"+QString::number(DrinkPrice));
+    pDialog->setDisplay("Amount:\t"+QString::number(money)+"\nNeed:\t"+QString::number(DrinkPrice));
 
     if (money >= DrinkPrice) {
         return E_MONEY_ENOUGH;
@@ -96,15 +113,21 @@ event_e StateMachine::as_check_amount(){
 }
 
 event_e StateMachine::as_cola(){
-    pDialog->setLogger("\n");
-    pDialog->setLogger(QString::fromStdString(DrinkType));
-    pDialog->setLogger(" is delivered");
+    pDialog->setLogger("\n" + QString::fromStdString(DrinkType) + " is delivered");
+    pDialog->setDisplay(QString::fromStdString(DrinkType) + " is delivered");
+
     return E_SEQ;
 }
 
 event_e StateMachine::as_change(){
-    pDialog->setLogger("\nchange (cents):" +  QString::number(money - DrinkPrice));
+    pDialog->setDisplay("change is: " +  QString::number(money - DrinkPrice)+" cents");
+    pDialog->setLogger("\nchange is: " +  QString::number(money - DrinkPrice)+" cents");
     return E_SEQ;
+}
+
+event_e StateMachine::as_changeWrong(){
+    pDialog->setLogger("\nchange (cents): wrong coin");
+    return E_IN0C;
 }
 
 void StateMachine::handleEvent(event_e eventIn) {
@@ -151,8 +174,12 @@ void StateMachine::handleEvent(event_e eventIn) {
 
         case S_WAIT_FOR_COINS:
             //pDialog->setLogger("-state (with event): Wait for coins");
-            pDialog->setDisplay("\nEnter your coins please");
+            pDialog->setDisplay("Enter your coins please");
             switch(eventIn) {
+            case E_IN0C:
+            //    pDialog->setLogger("\t 5 Cents inserted");
+                nextState = ae_0_cents();
+                break;
             case E_IN5C:
             //    pDialog->setLogger("\t 5 Cents inserted");
                 nextState = ae_5_cents();
@@ -169,6 +196,10 @@ void StateMachine::handleEvent(event_e eventIn) {
             //    pDialog->setLogger("\t 50 Cents inserted");
                 nextState = ae_50_cents();
                 break;
+            case E_IN100C:
+            //    pDialog->setLogger("\t 50 Cents inserted");
+                nextState = ae_100_cents();
+                break;
             case E_Drink1:
             //    pDialog->setLogger("\t Choice 1 selected");
                 nextState = ae_Drink1();
@@ -184,6 +215,10 @@ void StateMachine::handleEvent(event_e eventIn) {
             case E_Cancel:
             //    pDialog->setLogger("\t Choice 2 selected");
                 nextState = ae_Cancel();
+                break;
+            case E_coinWrong:
+            //    pDialog->setLogger("\t Unkown coin inserted");
+                nextState = ae_coinWrong();
                 break;
             default:
             //    pDialog->setLogger("S_WAIT_FOR_COINS System ERROR: Unknown event");

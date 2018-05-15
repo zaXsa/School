@@ -45,6 +45,10 @@
 
 #include <unistd.h>
 
+#include <iostream>
+#include <fstream>
+using namespace std;
+
 #include "AppInfo.h"
 #include "MainWindow.h"
 
@@ -67,6 +71,7 @@ MainWindow::MainWindow()
     mainLayout->addWidget(gridGroupBox);
     mainLayout->addWidget(horizontalGroupBox1);
     mainLayout->addWidget(horizontalGroupBox3);
+    mainLayout->addWidget(horizontalGroupBox4);
     //mainLayout->addWidget(buttonBox);
 
     setLayout(mainLayout);
@@ -95,6 +100,10 @@ void MainWindow::setLogger(const QString &text) {
     logDisplay->moveCursor(QTextCursor::End);
     logDisplay->insertPlainText(text);
     logDisplay->moveCursor(QTextCursor::End);
+
+    file1.open ("testing.txt", ios::out | ios::app);
+    file1 << "apple";
+    file1.close();
 }
 
 void MainWindow::createMenu()
@@ -105,7 +114,7 @@ void MainWindow::createMenu()
 
     exitAction = fileMenu->addAction("E&xit");//(4)
     connect(exitAction, SIGNAL(triggered()), this, SLOT(accept()));
-    exitAction2 = fileMenu->addAction("Log-in");//(4)
+    exitAction2 = fileMenu->addAction("Log-in(WIP");//(4)
     connect(exitAction2, SIGNAL(triggered()), this, SLOT(Loging()));
 }
 
@@ -113,10 +122,10 @@ void MainWindow::createHorizontalGroupBoxes()
 {
     // HorizontalGroupBox 1 -----------------------------------------------------
 
-    buttons[0] = new QPushButton("5C");
-    buttons[1] = new QPushButton("10C");
-    buttons[2] = new QPushButton("20C");
-    buttons[3] = new QPushButton("50C");
+    buttons[0] = new QPushButton("10C");
+    buttons[1] = new QPushButton("20C");
+    buttons[2] = new QPushButton("50C");
+    buttons[3] = new QPushButton("100C");
 
     QVBoxLayout *layout1 = new QVBoxLayout;
 
@@ -127,10 +136,10 @@ void MainWindow::createHorizontalGroupBoxes()
     layout1->addWidget(buttons[2]);
     layout1->addWidget(buttons[3]);
 
-    connect(buttons[0], SIGNAL(released()), this, SLOT(coin5C()));
-    connect(buttons[1], SIGNAL(released()), this, SLOT(coin10C()));
-    connect(buttons[2], SIGNAL(released()), this, SLOT(coin20C()));
-    connect(buttons[3], SIGNAL(released()), this, SLOT(coin50C()));
+    connect(buttons[0], SIGNAL(released()), this, SLOT(coin10C()));
+    connect(buttons[1], SIGNAL(released()), this, SLOT(coin20C()));
+    connect(buttons[2], SIGNAL(released()), this, SLOT(coin50C()));
+    connect(buttons[3], SIGNAL(released()), this, SLOT(coin100C()));
 
     enableCentButtons(false);
 
@@ -163,12 +172,40 @@ void MainWindow::createHorizontalGroupBoxes()
     horizontalGroupBox3 = new QGroupBox("Input drink type");
     horizontalGroupBox3->setLayout(layout3);
 
+    // HorizontalGroupBox 4 -----------------------------------------------------
+
+    buttonsss[0] = new QPushButton("Fake coins");
+    buttonsss[1] = new QPushButton("Placeholder");
+    buttonsss[2] = new QPushButton("Placeholder");
+    buttonsss[3] = new QPushButton("Placeholder");
+
+    QVBoxLayout *layout4 = new QVBoxLayout;
+
+    buttonsss[0]->setFixedWidth(200);
+    buttonsss[0]->setStyleSheet("background-color: red; color: blue");
+
+    layout4->addWidget(buttonsss[0]);
+    layout4->addWidget(buttonsss[1]);
+    layout4->addWidget(buttonsss[2]);
+    layout4->addWidget(buttonsss[3]);
+
+    connect(buttonsss[0], SIGNAL(released()), this, SLOT(coinWrong()));
+    //connect(buttonsss[1], SIGNAL(released()), this, SLOT(Cancel()));
+    //connect(buttonsss[2], SIGNAL(released()), this, SLOT(Cancel()));
+    //connect(buttonsss[3], SIGNAL(released()), this, SLOT(Cancel()));
+
+    enableCentButtons(false);
+
+    horizontalGroupBox4 = new QGroupBox("Extra buttons");
+    horizontalGroupBox4->setLayout(layout4);
+
     // HorizontalGroupBox 2 -----------------------------------------------------
 
     logDisplay = new QTextEdit("Logging started", this);
     logDisplay->setOverwriteMode(false);
     logDisplay->setReadOnly(true);
     logDisplay->setFixedWidth(400);
+    logDisplay->setFixedHeight(400);
 
     QHBoxLayout *layout2 = new QHBoxLayout;
     layout2->addWidget(logDisplay);
@@ -189,6 +226,7 @@ void MainWindow::createGridGroupBox()
     display->setTextColor(QColor(0,0,0));
     display->setFontPointSize(10);
     //display->setFixedSize(500, 50);
+    display->setFixedWidth(400);
     display->setOverwriteMode(true);
 
     QGridLayout *layout = new QGridLayout;
@@ -205,8 +243,9 @@ void MainWindow::createGridGroupBox()
 //----------------------------------------------------------- GUI event handlers
 void MainWindow::coin5C()
 {
-    pStateMachine->handleEvent(E_IN5C);
+    pStateMachine->handleEvent(E_IN10C);
 }
+
 
 void MainWindow::coin10C()
 {
@@ -221,6 +260,11 @@ void MainWindow::coin20C()
 void MainWindow::coin50C()
 {
     pStateMachine->handleEvent(E_IN50C);
+}
+
+void MainWindow::coin100C()
+{
+    pStateMachine->handleEvent(E_IN100C);
 }
 
 void MainWindow::Drink1()
@@ -241,4 +285,9 @@ void MainWindow::Drink3()
 void MainWindow::Cancel()
 {
     pStateMachine->handleEvent(E_Cancel);
+}
+
+void MainWindow::coinWrong()
+{
+    pStateMachine->handleEvent(E_coinWrong);
 }

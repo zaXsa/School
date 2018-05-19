@@ -8,7 +8,7 @@ using namespace std;
 
 typedef enum {S_NO, S_START, S_INIT, S_ChooseType, S_WAIT_FOR_COINS, S_CHECK_AMOUNT, S_Dispence, S_COLA, S_CHANGE, S_CHANGEWRONG}
              state_e;
-typedef enum {E_NO, E_SEQ, E_INIT, E_IN0C, E_IN5C, E_IN10C, E_IN20C, E_IN50C, E_IN100C, E_Drink1, E_Drink2, E_Drink3, E_coinWrong, E_Cancel, E_MONEY_NOTENOUGH, E_MONEY_ENOUGH}
+typedef enum {E_NO, E_SEQ, E_INIT, E_NODRINKS ,E_IN0C, E_IN5C, E_IN10C, E_IN20C, E_IN50C, E_IN100C, E_Drink1, E_Drink2, E_Drink3, E_coinWrong, E_Cancel, E_MONEY_NOTENOUGH, E_MONEY_ENOUGH}
              event_e;
 
 class MainWindow;
@@ -27,6 +27,9 @@ private:
     int money;
 
     std::string DrinkType;
+    int AvailableAmount1 = 5;
+    int AvailableAmount2 = 5;
+    int AvailableAmount3 = 5;
     int DrinkPrice;
 
     state_e ae_start();

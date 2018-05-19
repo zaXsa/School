@@ -68,6 +68,7 @@ public:
     void enableCentButtons(bool enable);
     void setDisplay(const QString& text);
     void setLogger(const QString& text);
+    void setbuttonss(bool disable);
 
 private:
     void createMenu();

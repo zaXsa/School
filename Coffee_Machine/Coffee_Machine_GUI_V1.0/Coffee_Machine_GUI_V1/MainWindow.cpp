@@ -132,6 +132,30 @@ void MainWindow::setLogger(const QString &text) {
     file1.close();
 }
 
+void MainWindow::setbuttonss(bool disable){
+    if(disable){
+        buttonss[0]->setEnabled(true);
+        buttonss[1]->setEnabled(true);
+        buttonss[2]->setEnabled(true);
+        buttonss[3]->setEnabled(true);
+
+        buttons[0]->setEnabled(true);
+        buttons[1]->setEnabled(true);
+        buttons[2]->setEnabled(true);
+        buttons[3]->setEnabled(true);
+    } else {
+        buttonss[0]->setEnabled(false);
+        buttonss[1]->setEnabled(false);
+        buttonss[2]->setEnabled(false);
+        buttonss[3]->setEnabled(false);
+
+        buttons[0]->setEnabled(false);
+        buttons[1]->setEnabled(false);
+        buttons[2]->setEnabled(false);
+        buttons[3]->setEnabled(false);
+    }
+}
+
 void MainWindow::createMenu()
 {
     menuBar = new QMenuBar;//(1)
@@ -172,6 +196,10 @@ void MainWindow::createHorizontalGroupBoxes()
     connect(buttons[3], SIGNAL(released()), this, SLOT(coin100C()));
 
     enableCentButtons(false);
+    buttons[3]->setDisabled(true);
+    buttons[3]->setEnabled(false);
+    QApplication::processEvents();
+
 
     horizontalGroupBox1 = new QGroupBox("Input cents");
     horizontalGroupBox1->setLayout(layout1);
@@ -224,6 +252,9 @@ void MainWindow::createHorizontalGroupBoxes()
     //connect(buttonsss[2], SIGNAL(released()), this, SLOT(Cancel()));
     //connect(buttonsss[3], SIGNAL(released()), this, SLOT(Cancel()));
 
+    buttonsss[1]->setEnabled(false);
+    buttonsss[2]->setEnabled(false);
+    buttonsss[3]->setEnabled(false);
     enableCentButtons(false);
 
     horizontalGroupBox4 = new QGroupBox("Extra buttons");

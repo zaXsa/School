@@ -91,11 +91,28 @@ event_e StateMachine::as_init(){
     money = 0.0;
     DrinkType = "Nothing";
     DrinkPrice = 0;
-    pDialog->setDisplay("Enter Drink choice");
-    pDialog->enableCentButtons(true);
 
+    if (AvailableAmount1 <= 0){
+        pDialog->setDisplay("No more drink 1");
+        pDialog->setLogger("No more drink 1");
+        pDialog->setbuttonss(false);
+        return E_NODRINKS;
+    }if (AvailableAmount2 <= 0){
+        pDialog->setDisplay("No more drink 2");
+        pDialog->setLogger("No more drink 2");
+        pDialog->setbuttonss(false);
+        return E_NODRINKS;
+    }if (AvailableAmount3 <= 0){
+        pDialog->setDisplay("No more drink 3");
+        pDialog->setLogger("No more drink 3");
+        pDialog->setbuttonss(false);
+        return E_NODRINKS;
+    }else{
+        pDialog->setDisplay("Enter Drink choice");
+        pDialog->enableCentButtons(true);
 
-    return E_SEQ;
+        return E_SEQ;
+    }
 }
 
 event_e StateMachine::as_wait_for_coins(){
@@ -117,6 +134,16 @@ event_e StateMachine::as_check_amount(){
 event_e StateMachine::as_cola(){
     pDialog->setLogger("\n" + QString::fromStdString(DrinkType) + " is delivered");
     pDialog->setDisplay(QString::fromStdString(DrinkType) + " is delivered");
+
+    if(DrinkType.compare("Drink1") == 0){
+        AvailableAmount1--;
+    }else if(DrinkType.compare("Drink2") == 0){
+        AvailableAmount2--;
+    }else if(DrinkType.compare("Drink3") == 0){
+        AvailableAmount3--;
+    }else if(DrinkType.compare("Nothing") == 0){
+
+    }
 
     return E_SEQ;
 }
@@ -179,7 +206,7 @@ void StateMachine::handleEvent(event_e eventIn) {
             pDialog->setDisplay("Enter your coins please");
             switch(eventIn) {
             case E_IN0C:
-                pDialog->setLogger("\n\t 5 Cents inserted");
+                pDialog->setLogger("\n\t 0 Cents inserted");
                 nextState = ae_0_cents();
                 break;
             case E_IN5C:
@@ -199,7 +226,7 @@ void StateMachine::handleEvent(event_e eventIn) {
                 nextState = ae_50_cents();
                 break;
             case E_IN100C:
-                pDialog->setLogger("\n\t 50 Cents inserted");
+                pDialog->setLogger("\n\t 100 Cents inserted");
                 nextState = ae_100_cents();
                 break;
             case E_Drink1:

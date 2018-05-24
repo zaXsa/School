@@ -183,7 +183,7 @@ void MainWindow::createHorizontalGroupBoxes()
 
     QVBoxLayout *layout1 = new QVBoxLayout;
 
-    buttons[0]->setFixedWidth(200);
+    buttons[0]->setFixedWidth(100);
 
     layout1->addWidget(buttons[0]);
     layout1->addWidget(buttons[1]);
@@ -196,8 +196,6 @@ void MainWindow::createHorizontalGroupBoxes()
     connect(buttons[3], SIGNAL(released()), this, SLOT(coin100C()));
 
     enableCentButtons(false);
-    buttons[3]->setDisabled(true);
-    buttons[3]->setEnabled(false);
     QApplication::processEvents();
 
 
@@ -213,7 +211,7 @@ void MainWindow::createHorizontalGroupBoxes()
 
     QVBoxLayout *layout3 = new QVBoxLayout;
 
-    buttonss[0]->setFixedWidth(200);
+    buttonss[0]->setFixedWidth(100);
 
     layout3->addWidget(buttonss[0]);
     layout3->addWidget(buttonss[1]);
@@ -239,7 +237,7 @@ void MainWindow::createHorizontalGroupBoxes()
 
     QVBoxLayout *layout4 = new QVBoxLayout;
 
-    buttonsss[0]->setFixedWidth(200);
+    buttonsss[0]->setFixedWidth(100);
     buttonsss[0]->setStyleSheet("background-color: red; color: blue");
 
     layout4->addWidget(buttonsss[0]);
@@ -292,13 +290,14 @@ void MainWindow::createGridGroupBox()
 
     QGridLayout *layout = new QGridLayout;
     layout->addWidget(label, 0, 0);
-    layout->addWidget(display, 0, 1, 1, 5);
+    layout->addWidget(display, 1, 1, 1, 5);
 
     // layout->setColumnStretch(1, 10);
     layout->setColumnStretch(2, 10);
 
     gridGroupBox = new QGroupBox("Display");
     gridGroupBox->setLayout(layout);
+    gridGroupBox->setFixedWidth(450);
 }
 
 //----------------------------------------------------------- GUI event handlers

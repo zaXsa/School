@@ -3691,4 +3691,630 @@ change is: 0 cents
 -state (with event): CHANGE
 -state: InitNo more drink 1
 -state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice
+S_ChooseType System ERROR: Unknown event
+-state (with event): Wait for coins
+	 Unkown coin inserted
+wrong coin inserted, Dispencing wrong coin
+-state: Check amount
+Amount:	0
+Need:	0
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Nothing is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 2 selected
+-state (with event): Wait for coins
+	 Choice 2 selected
+-state: Check amount
+Amount:	0
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 Unkown coin inserted
+wrong coin inserted, Dispencing wrong coin
+-state: Check amount
+Amount:	0
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 20 Cents inserted
+-state: Check amount
+Amount:	20
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 20 Cents inserted
+-state: Check amount
+Amount:	40
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 Unkown coin inserted
+wrong coin inserted, Dispencing wrong coin
+-state: Check amount
+Amount:	40
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 Choice 2 selected
+-state: Check amount
+Amount:	40
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 Choice 1 selected
+-state: Check amount
+Amount:	40
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 50 Cents inserted
+-state: Check amount
+Amount:	90
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 Choice 1 selected
+-state: Check amount
+Amount:	90
+Need:	120
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 50 Cents inserted
+-state: Check amount
+Amount:	140
+Need:	120
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Drink3 is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 20 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 2 selected
+-state (with event): Wait for coins
+	 Choice 2 selected
+-state: Check amount
+Amount:	0
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 50 Cents inserted
+-state: Check amount
+Amount:	50
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 1 selected
+-state (with event): Wait for coins
+	 Choice 1 selected
+-state: Check amount
+Amount:	0
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 50 Cents inserted
+-state: Check amount
+Amount:	50
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 50 Cents inserted
+-state: Check amount
+Amount:	100
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Drink1 is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice
+S_ChooseType System ERROR: Unknown event
+-state (with event): Wait for coins
+	 50 Cents inserted
+-state: Check amount
+Amount:	50
+Need:	0
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Nothing is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 50 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 1 selected
+-state (with event): Wait for coins
+	 Choice 1 selected
+-state: Check amount
+Amount:	0
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 50 Cents inserted
+-state: Check amount
+Amount:	50
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 50 Cents inserted
+-state: Check amount
+Amount:	100
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Drink1 is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 1 selected
+-state (with event): Wait for coins
+	 Choice 1 selected
+-state: Check amount
+Amount:	0
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	100
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Drink1 is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 1 selected
+-state (with event): Wait for coins
+	 Choice 1 selected
+-state: Check amount
+Amount:	0
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	100
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Drink1 is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 1 selected
+-state (with event): Wait for coins
+	 Choice 1 selected
+-state: Check amount
+Amount:	0
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	100
+Need:	100
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Drink1 is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: InitNo more drink 1
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice
+S_ChooseType System ERROR: Unknown event
+-state (with event): Wait for coins
+	 20 Cents inserted
+-state: Check amount
+Amount:	20
+Need:	0
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Nothing is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 20 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 2 selected
+-state (with event): Wait for coins
+	 Choice 2 selected
+-state: Check amount
+Amount:	0
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	100
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	200
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Drink2 is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice
+S_ChooseType System ERROR: Unknown event
+-state (with event): Wait for coins
+	 Choice 2 selected
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 2 selected
+-state (with event): Wait for coins
+	 Choice 2 selected
+-state: Check amount
+Amount:	0
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	100
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	200
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Drink2 is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 2 selected
+-state (with event): Wait for coins
+	 Choice 2 selected
+-state: Check amount
+Amount:	0
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	100
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	200
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Drink2 is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 2 selected
+-state (with event): Wait for coins
+	 Choice 2 selected
+-state: Check amount
+Amount:	0
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	100
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	200
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Drink2 is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 2 selected
+-state (with event): Wait for coins
+	 Choice 2 selected
+-state: Check amount
+Amount:	0
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	100
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	200
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Drink2 is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: InitNo more drink 2
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice
+S_ChooseType System ERROR: Unknown event
+-state (with event): Wait for coins
+	 Unkown coin inserted
+wrong coin inserted, Dispencing wrong coin
+-state: Check amount
+Amount:	0
+Need:	0
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Nothing is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: InitNo more drink 2
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 2 selected
+-state (with event): Wait for coins
+	 Choice 2 selected
+-state: Check amount
+Amount:	0
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 50 Cents inserted
+-state: Check amount
+Amount:	50
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 50 Cents inserted
+-state: Check amount
+Amount:	100
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 Choice 1 selected
+-state: Check amount
+Amount:	100
+Need:	120
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 20 Cents inserted
+-state: Check amount
+Amount:	120
+Need:	120
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Drink3 is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 0 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
+-state: Wait for drink
+-state (with event): Wait for drink choice	 Choice 2 selected
+-state (with event): Wait for coins
+	 Choice 2 selected
+-state: Check amount
+Amount:	0
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 50 Cents inserted
+-state: Check amount
+Amount:	50
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 50 Cents inserted
+-state: Check amount
+Amount:	100
+Need:	200
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 Choice 1 selected
+-state: Check amount
+Amount:	100
+Need:	120
+-state (with event): Check amount
+-----------------------------------------------------
+-state: Wait for coins
+-state (with event): Wait for coins
+	 100 Cents inserted
+-state: Check amount
+Amount:	200
+Need:	120
+-state (with event): Check amount
+-----------------------------------------------------
+-state: COLA
+Drink3 is delivered
+-state (with event): COLA
+-state: CHANGE
+change is: 80 cents
+-state (with event): CHANGE
+-state: Init
+-state (with event): Init
 -state: Wait for drink

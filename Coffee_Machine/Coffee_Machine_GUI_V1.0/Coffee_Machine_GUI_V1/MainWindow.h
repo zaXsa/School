@@ -42,6 +42,7 @@
 #define MAINWINDOW_H
 
 #include "StateMachine.h"
+#include "SubWindow.h"
 #include <QDialog>
 
 #include <iostream>
@@ -69,6 +70,7 @@ public:
     void setDisplay(const QString& text);
     void setLogger(const QString& text);
     void setbuttonss(bool disable);
+    void ShowSubWindow();
 
 private:
     void createMenu();
@@ -112,6 +114,7 @@ private:
 
     ofstream file1;
 
+    SubWindow LogInWindow;
 private slots:
     void Loging();
     void ToggleLogger();

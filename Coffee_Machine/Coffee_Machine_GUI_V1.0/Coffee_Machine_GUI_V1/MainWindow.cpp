@@ -80,9 +80,7 @@ MainWindow::MainWindow()
 }
 
 void MainWindow::Loging(){
-    this->hide();
-    sleep(5);
-    this->show();
+    ShowSubWindow();
 }
 
 void MainWindow::ToggleLogger(){
@@ -154,6 +152,10 @@ void MainWindow::setbuttonss(bool disable){
         buttons[2]->setEnabled(false);
         buttons[3]->setEnabled(false);
     }
+}
+
+void MainWindow::ShowSubWindow(){
+    LogInWindow.show();
 }
 
 void MainWindow::createMenu()

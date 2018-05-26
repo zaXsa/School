@@ -64,6 +64,11 @@ SubWindow::SubWindow(){
     Pass->setPlaceholderText("Enter Pass");
     Pass->setEchoMode(QLineEdit::Password);
 
+    //  Later Use
+    //  QString XMAX=ui->lineEdit->text();
+    //  xMax=XMAX.toDouble();
+    //  std::stod(ui->lineEdit->text().toStdString());
+
     QVBoxLayout *layout = new QVBoxLayout;
 
     layout->addWidget(Name);

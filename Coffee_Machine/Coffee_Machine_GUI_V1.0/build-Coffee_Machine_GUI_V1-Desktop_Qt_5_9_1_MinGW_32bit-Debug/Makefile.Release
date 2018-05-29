@@ -116,8 +116,8 @@ compiler_moc_header_clean:
 	-$(DEL_FILE) release\moc_MainWindow.cpp release\moc_SubWindow.cpp
 release/moc_MainWindow.cpp: ../Coffee_Machine_GUI_V1/StateMachine.h \
 		../Coffee_Machine_GUI_V1/SubWindow.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLineEdit \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdialog.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtguiglobal.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qglobal.h \
@@ -143,7 +143,6 @@ release/moc_MainWindow.cpp: ../Coffee_Machine_GUI_V1/StateMachine.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qversiontagging.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtgui-config.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qframe.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qwidget.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qwindowdefs.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qobjectdefs.h \
@@ -218,19 +217,20 @@ release/moc_MainWindow.cpp: ../Coffee_Machine_GUI_V1/StateMachine.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qfiledevice.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLineEdit \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qframe.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextcursor.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextformat.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qpen.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextoption.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDialog \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdialog.h \
 		../Coffee_Machine_GUI_V1/MainWindow.h \
 		release/moc_predefs.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/bin/moc.exe
 	C:\Qt\Qt5.9.1\5.9.1\mingw53_32\bin\moc.exe $(DEFINES) --include release/moc_predefs.h -IC:/Qt/Qt5.9.1/5.9.1/mingw53_32/mkspecs/win32-g++ -IC:/Users/renzo/Documents/GitHub/School/Coffee_Machine/Coffee_Machine_GUI_V1.0/Coffee_Machine_GUI_V1 -IC:/Qt/Qt5.9.1/5.9.1/mingw53_32/include -IC:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore -I. -IC:/Qt/Qt5.9.1/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Qt5.9.1/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Qt5.9.1/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Qt5.9.1/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Qt5.9.1/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.9.1/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward ..\Coffee_Machine_GUI_V1\MainWindow.h -o release\moc_MainWindow.cpp
 
-release/moc_SubWindow.cpp: C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLineEdit \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlineedit.h \
+release/moc_SubWindow.cpp: C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdialog.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtguiglobal.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qglobal.h \
@@ -256,7 +256,6 @@ release/moc_SubWindow.cpp: C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLin
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qversiontagging.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtgui-config.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qframe.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qwidget.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qwindowdefs.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qobjectdefs.h \
@@ -331,6 +330,9 @@ release/moc_SubWindow.cpp: C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLin
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qfiledevice.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLineEdit \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qframe.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextcursor.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextformat.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qpen.h \
@@ -359,8 +361,8 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 release/main.o: ../Coffee_Machine_GUI_V1/main.cpp ../Coffee_Machine_GUI_V1/MainWindow.h \
 		../Coffee_Machine_GUI_V1/StateMachine.h \
 		../Coffee_Machine_GUI_V1/SubWindow.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLineEdit \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdialog.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtguiglobal.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qglobal.h \
@@ -386,7 +388,6 @@ release/main.o: ../Coffee_Machine_GUI_V1/main.cpp ../Coffee_Machine_GUI_V1/MainW
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qversiontagging.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtgui-config.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qframe.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qwidget.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qwindowdefs.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qobjectdefs.h \
@@ -461,12 +462,13 @@ release/main.o: ../Coffee_Machine_GUI_V1/main.cpp ../Coffee_Machine_GUI_V1/MainW
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qfiledevice.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLineEdit \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qframe.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextcursor.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextformat.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qpen.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextoption.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDialog \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdialog.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
@@ -936,15 +938,15 @@ release/MainWindow.o: ../Coffee_Machine_GUI_V1/MainWindow.cpp C:/Qt/Qt5.9.1/5.9.
 		../Coffee_Machine_GUI_V1/MainWindow.h \
 		../Coffee_Machine_GUI_V1/StateMachine.h \
 		../Coffee_Machine_GUI_V1/SubWindow.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLineEdit \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDialog
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLineEdit
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\MainWindow.o ..\Coffee_Machine_GUI_V1\MainWindow.cpp
 
 release/StateMachine.o: ../Coffee_Machine_GUI_V1/StateMachine.cpp ../Coffee_Machine_GUI_V1/MainWindow.h \
 		../Coffee_Machine_GUI_V1/StateMachine.h \
 		../Coffee_Machine_GUI_V1/SubWindow.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLineEdit \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdialog.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtguiglobal.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qglobal.h \
@@ -970,7 +972,6 @@ release/StateMachine.o: ../Coffee_Machine_GUI_V1/StateMachine.cpp ../Coffee_Mach
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qversiontagging.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtgui-config.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qframe.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qwidget.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qwindowdefs.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qobjectdefs.h \
@@ -1045,17 +1046,18 @@ release/StateMachine.o: ../Coffee_Machine_GUI_V1/StateMachine.cpp ../Coffee_Mach
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qfiledevice.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLineEdit \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qframe.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextcursor.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextformat.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qpen.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextoption.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDialog \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdialog.h
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextoption.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\StateMachine.o ..\Coffee_Machine_GUI_V1\StateMachine.cpp
 
 release/SubWindow.o: ../Coffee_Machine_GUI_V1/SubWindow.cpp ../Coffee_Machine_GUI_V1/SubWindow.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLineEdit \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdialog.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtguiglobal.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qglobal.h \
@@ -1081,7 +1083,6 @@ release/SubWindow.o: ../Coffee_Machine_GUI_V1/SubWindow.cpp ../Coffee_Machine_GU
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qversiontagging.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtgui-config.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qframe.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qwidget.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qwindowdefs.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qobjectdefs.h \
@@ -1156,6 +1157,9 @@ release/SubWindow.o: ../Coffee_Machine_GUI_V1/SubWindow.cpp ../Coffee_Machine_GU
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qfiledevice.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QLineEdit \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qframe.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextcursor.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qtextformat.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qpen.h \
@@ -1402,7 +1406,6 @@ release/SubWindow.o: ../Coffee_Machine_GUI_V1/SubWindow.cpp ../Coffee_Machine_GU
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qcalendarwidget.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qcheckbox.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qcolordialog.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdialog.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qcolormap.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qcolumnview.h \
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qcombobox.h \
@@ -1513,8 +1516,7 @@ release/SubWindow.o: ../Coffee_Machine_GUI_V1/SubWindow.cpp ../Coffee_Machine_GU
 		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QPixmap \
 		../Coffee_Machine_GUI_V1/AppInfo.h \
 		../Coffee_Machine_GUI_V1/MainWindow.h \
-		../Coffee_Machine_GUI_V1/StateMachine.h \
-		C:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDialog
+		../Coffee_Machine_GUI_V1/StateMachine.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\SubWindow.o ..\Coffee_Machine_GUI_V1\SubWindow.cpp
 
 release/moc_MainWindow.o: release/moc_MainWindow.cpp 

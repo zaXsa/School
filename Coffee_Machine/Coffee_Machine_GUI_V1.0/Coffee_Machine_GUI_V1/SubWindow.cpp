@@ -57,31 +57,42 @@ using namespace std;
 SubWindow::SubWindow(){
     Name = new QLineEdit();
     Pass = new QLineEdit();
-
-    Name->setFixedWidth(80);
+    Name->setFixedWidth(100);
     Name->setPlaceholderText("Enter Name");
-    Pass->setFixedWidth(80);
+    Pass->setFixedWidth(100);
     Pass->setPlaceholderText("Enter Pass");
     Pass->setEchoMode(QLineEdit::Password);
+
+    LogInButton = new QPushButton("LogIn");
+    LogInButton->setFixedWidth(50);
+
+    Logdisplay = new QTextEdit("Please enter name and password");
+    Logdisplay->setReadOnly(true);
+    Logdisplay->setTextColor(QColor(0,0,0));
+    Logdisplay->setFontPointSize(10);
+    Logdisplay->setFixedSize(250,30);
+    Logdisplay->setOverwriteMode(true);
 
     //  Later Use
     //  QString XMAX=ui->lineEdit->text();
     //  xMax=XMAX.toDouble();
     //  std::stod(ui->lineEdit->text().toStdString());
 
-    QVBoxLayout *layout = new QVBoxLayout;
+    QGridLayout *layout = new QGridLayout();
 
-    layout->addWidget(Name);
-    layout->addWidget(Pass);
+    layout->addWidget(Logdisplay, 0, 0);
+    layout->addWidget(Name, 1, 0);
+    layout->addWidget(Pass, 1, 1);
+    layout->addWidget(LogInButton, 2, 0);
 
-    VerticalGroup1 = new QGroupBox("Log-in screen");
-    VerticalGroup1->setLayout(layout);
+    gridGroupBox = new QGroupBox("Log-in screen");
+    gridGroupBox->setLayout(layout);
 
     QHBoxLayout *mainLayout = new QHBoxLayout;
-    mainLayout->addWidget(VerticalGroup1);
-    setWindowTitle(APPNAME_VERSION);
-
-    setFixedSize(200,100);
+    mainLayout->addWidget(gridGroupBox);
 
     setLayout(mainLayout);
+
+    setWindowTitle(APPNAME_VERSION);
+    setFixedSize(300,200);
 }

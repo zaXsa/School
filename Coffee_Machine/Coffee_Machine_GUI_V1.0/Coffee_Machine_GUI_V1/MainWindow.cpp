@@ -206,7 +206,7 @@ void MainWindow::createHorizontalGroupBoxes()
 
     // HorizontalGroupBox 3 -----------------------------------------------------
 
-    buttonss[0] = new QPushButton("Drink 1");
+    buttonss[0] = new QPushButton();
     buttonss[1] = new QPushButton("Drink 2");
     buttonss[2] = new QPushButton("Drink 3");
     buttonss[3] = new QPushButton("Cancel");
@@ -214,6 +214,10 @@ void MainWindow::createHorizontalGroupBoxes()
     QVBoxLayout *layout3 = new QVBoxLayout;
 
     buttonss[0]->setFixedWidth(100);
+    QPixmap pixmap("coffee.png");
+    QIcon ButtonIcon(pixmap);
+    buttonss[0]->setIcon(ButtonIcon);
+    buttonss[0]->setIconSize(pixmap.rect().size());
 
     layout3->addWidget(buttonss[0]);
     layout3->addWidget(buttonss[1]);
@@ -276,22 +280,28 @@ void MainWindow::createHorizontalGroupBoxes()
 
 }
 
-void MainWindow::createGridGroupBox()
-{
-    QPixmap *image = new QPixmap(":/icons/Cola.ico");  // in CVMresources.qrc
-    QLabel *label = new QLabel;
-    label->setPixmap(*image);
+void MainWindow::createGridGroupBox(){
+    QImage *myImage = new QImage;
+    myImage->load("CoffeeDisplay.png");
+
+    QLabel *myLabel = new QLabel;
+    myLabel->setPixmap(QPixmap::fromImage(*myImage));
+    myLabel->setFixedSize(40,40);
+
+    QLabel *myLabel1 = new QLabel;
+    myLabel1->setPixmap(QPixmap::fromImage(*myImage));
+    myLabel1->setFixedSize(40,40);
 
     display = new QTextEdit(this);
     display->setReadOnly(true);
     display->setTextColor(QColor(0,0,0));
     display->setFontPointSize(10);
-    //display->setFixedSize(500, 50);
     display->setFixedWidth(400);
     display->setOverwriteMode(true);
 
     QGridLayout *layout = new QGridLayout;
-    layout->addWidget(label, 0, 0);
+    layout->addWidget(myLabel, 0, 1);
+    layout->addWidget(myLabel1, 0, 2);
     layout->addWidget(display, 1, 1, 1, 5);
 
     // layout->setColumnStretch(1, 10);

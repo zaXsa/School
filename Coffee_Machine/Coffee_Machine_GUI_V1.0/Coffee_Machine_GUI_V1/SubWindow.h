@@ -26,11 +26,15 @@ Q_OBJECT // to make it possible to use events(SIGNAL)/event-handlers(SLOT)
 
 public:
     SubWindow();
-private:
-    QGroupBox *VerticalGroup1;
 
     QLineEdit *Name;
     QLineEdit *Pass;
+    QTextEdit *Logdisplay;
+    QPushButton *LogInButton;
+    QGroupBox *gridGroupBox;
+private:
+    QGroupBox *VerticalGroup1;
+
 };
 
 #endif // SUBWINDOW_H

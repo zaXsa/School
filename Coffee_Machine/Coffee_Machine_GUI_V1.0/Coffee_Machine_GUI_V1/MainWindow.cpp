@@ -52,6 +52,10 @@ using namespace std;
 #include "AppInfo.h"
 #include "MainWindow.h"
 
+extern int AvailableAmount1;
+extern int AvailableAmount2;
+extern int AvailableAmount3;
+
 MainWindow::MainWindow()
 {
     pStateMachine = new StateMachine(this);

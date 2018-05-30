@@ -27,9 +27,6 @@ private:
     int money;
 
     std::string DrinkType;
-    int AvailableAmount1 = 1;
-    int AvailableAmount2 = 1;
-    int AvailableAmount3 = 1;
     string DrinkAvailable1 = "Drink 1 is available";
     string DrinkAvailable2 = "Drink 2 is available";
     string DrinkAvailable3 = "Drink 3 is available";

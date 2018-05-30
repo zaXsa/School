@@ -5,6 +5,10 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
+
+extern int AvailableAmount1;
+extern int AvailableAmount2;
+extern int AvailableAmount3;
 //********************* Mealy Actions
 
 state_e StateMachine::ae_start(){
@@ -97,19 +101,31 @@ event_e StateMachine::as_init(){
         pDialog->setLogger("No more drink 1");
         DrinkAvailable1 = "Drink 1 is not available";
         pDialog->setbuttons1(false);
+    }else {
+        DrinkAvailable1 = "Drink 1 is available";
+        pDialog->setbuttons1(true);
     }
     if (AvailableAmount2 <= 0){
         DrinkAvailable2 = "Drink 2 is not available";
         pDialog->setLogger("No more drink 2");
         pDialog->setbuttons2(false);
+    }else {
+        DrinkAvailable2 = "Drink 2 is available";
+        pDialog->setbuttons2(true);
     }
     if (AvailableAmount3 <= 0){
         DrinkAvailable3 = "Drink 3 is not available";
         pDialog->setLogger("No more drink 3");
         pDialog->setbuttons3(false);
+    }else {
+        DrinkAvailable3 = "Drink 3 is available";
+        pDialog->setbuttons3(true);
     }
 
-        pDialog->setDisplay("Enter Drink choice\n"+QString::fromStdString(DrinkAvailable1)+"\n"+QString::fromStdString(DrinkAvailable2)+"\n"+QString::fromStdString(DrinkAvailable3));
+        pDialog->setDisplay("Enter Drink choice\n--------------------------------------------------------------\n"
+                            +QString::fromStdString(DrinkAvailable1)
+                            +"\n"+QString::fromStdString(DrinkAvailable2)
+                            +"\n"+QString::fromStdString(DrinkAvailable3));
         pDialog->enableCentButtons(true);
         return E_SEQ;
 }

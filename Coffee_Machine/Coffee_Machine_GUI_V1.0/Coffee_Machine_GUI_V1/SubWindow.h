@@ -34,6 +34,7 @@ public:
     QGroupBox *gridGroupBox;
 
     void setLogDisplay(const QString& text);
+    void AddDrinks();
 private:
     QGroupBox *VerticalGroup1;
 private slots:

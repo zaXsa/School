@@ -54,6 +54,10 @@ using namespace std;
 #include "AppInfo.h"
 #include "MainWindow.h"
 
+extern int AvailableAmount1;
+extern int AvailableAmount2;
+extern int AvailableAmount3;
+
 SubWindow::SubWindow(){
     Name = new QLineEdit();
     Pass = new QLineEdit();
@@ -105,6 +109,7 @@ void SubWindow::CheckName(){
 
     if(AdminName.compare("Admin") == 0 && AdminPass.compare("Admin") == 0){
         setLogDisplay("You logged in");
+        AddDrinks();
     } else {
         setLogDisplay("Wrong Name or Password");
     }
@@ -115,7 +120,11 @@ void SubWindow::setLogDisplay(const QString &text) {
     Logdisplay->update();
 }
 
-
+void SubWindow::AddDrinks(){
+    AvailableAmount1 = 1;
+    AvailableAmount2 = 2;
+    AvailableAmount3 = 3;
+}
 
 
 

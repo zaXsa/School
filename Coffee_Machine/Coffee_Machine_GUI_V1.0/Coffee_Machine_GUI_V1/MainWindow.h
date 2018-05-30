@@ -70,6 +70,9 @@ public:
     void setDisplay(const QString& text);
     void setLogger(const QString& text);
     void setbuttonss(bool disable);
+    void setbuttons1(bool disable);
+    void setbuttons2(bool disable);
+    void setbuttons3(bool disable);
     void ShowSubWindow();
 
 private:

@@ -27,9 +27,12 @@ private:
     int money;
 
     std::string DrinkType;
-    int AvailableAmount1 = 5;
-    int AvailableAmount2 = 5;
-    int AvailableAmount3 = 5;
+    int AvailableAmount1 = 1;
+    int AvailableAmount2 = 1;
+    int AvailableAmount3 = 1;
+    string DrinkAvailable1 = "Drink 1 is available";
+    string DrinkAvailable2 = "Drink 2 is available";
+    string DrinkAvailable3 = "Drink 3 is available";
     int DrinkPrice;
 
     state_e ae_start();

@@ -32,9 +32,12 @@ public:
     QTextEdit *Logdisplay;
     QPushButton *LogInButton;
     QGroupBox *gridGroupBox;
+
+    void setLogDisplay(const QString& text);
 private:
     QGroupBox *VerticalGroup1;
-
+private slots:
+    void CheckName();
 };
 
 #endif // SUBWINDOW_H

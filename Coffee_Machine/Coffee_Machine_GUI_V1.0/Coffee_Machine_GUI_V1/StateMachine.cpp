@@ -39,6 +39,7 @@ state_e StateMachine::ae_Cancel(){
 }
 state_e StateMachine::ae_coinWrong(){
     pDialog->setLogger("\nwrong coin inserted, Dispencing wrong coin");
+    pDialog->setDisplay("\nwrong coin inserted, Dispencing wrong coin");
 
     return S_CHECK_AMOUNT;
 }
@@ -93,26 +94,24 @@ event_e StateMachine::as_init(){
     DrinkPrice = 0;
 
     if (AvailableAmount1 <= 0){
-        pDialog->setDisplay("No more drink 1");
         pDialog->setLogger("No more drink 1");
-        pDialog->setbuttonss(false);
-        return E_NODRINKS;
-    }if (AvailableAmount2 <= 0){
-        pDialog->setDisplay("No more drink 2");
-        pDialog->setLogger("No more drink 2");
-        pDialog->setbuttonss(false);
-        return E_NODRINKS;
-    }if (AvailableAmount3 <= 0){
-        pDialog->setDisplay("No more drink 3");
-        pDialog->setLogger("No more drink 3");
-        pDialog->setbuttonss(false);
-        return E_NODRINKS;
-    }else{
-        pDialog->setDisplay("Enter Drink choice");
-        pDialog->enableCentButtons(true);
-
-        return E_SEQ;
+        DrinkAvailable1 = "Drink 1 is not available";
+        pDialog->setbuttons1(false);
     }
+    if (AvailableAmount2 <= 0){
+        DrinkAvailable2 = "Drink 2 is not available";
+        pDialog->setLogger("No more drink 2");
+        pDialog->setbuttons2(false);
+    }
+    if (AvailableAmount3 <= 0){
+        DrinkAvailable3 = "Drink 3 is not available";
+        pDialog->setLogger("No more drink 3");
+        pDialog->setbuttons3(false);
+    }
+
+        pDialog->setDisplay("Enter Drink choice\n"+QString::fromStdString(DrinkAvailable1)+"\n"+QString::fromStdString(DrinkAvailable2)+"\n"+QString::fromStdString(DrinkAvailable3));
+        pDialog->enableCentButtons(true);
+        return E_SEQ;
 }
 
 event_e StateMachine::as_wait_for_coins(){

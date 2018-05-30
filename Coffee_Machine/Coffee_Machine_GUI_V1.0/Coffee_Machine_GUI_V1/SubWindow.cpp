@@ -66,6 +66,8 @@ SubWindow::SubWindow(){
     LogInButton = new QPushButton("LogIn");
     LogInButton->setFixedWidth(50);
 
+    connect(LogInButton, SIGNAL(released()), this, SLOT(CheckName()));
+
     Logdisplay = new QTextEdit("Please enter name and password");
     Logdisplay->setReadOnly(true);
     Logdisplay->setTextColor(QColor(0,0,0));
@@ -96,3 +98,32 @@ SubWindow::SubWindow(){
     setWindowTitle(APPNAME_VERSION);
     setFixedSize(300,200);
 }
+
+void SubWindow::CheckName(){
+    QString AdminName = Name->text();
+    QString AdminPass = Pass->text();
+
+    if(AdminName.compare("Admin") == 0 && AdminPass.compare("Admin") == 0){
+        setLogDisplay("You logged in");
+    } else {
+        setLogDisplay("Wrong Name or Password");
+    }
+}
+
+void SubWindow::setLogDisplay(const QString &text) {
+    Logdisplay->setText(text);
+    Logdisplay->update();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

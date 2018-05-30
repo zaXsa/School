@@ -154,6 +154,30 @@ void MainWindow::setbuttonss(bool disable){
     }
 }
 
+void MainWindow::setbuttons1(bool disable){
+    if(disable){
+        buttonss[0]->setEnabled(true);
+    } else {
+        buttonss[0]->setEnabled(false);
+    }
+}
+
+void MainWindow::setbuttons2(bool disable){
+    if(disable){
+        buttonss[1]->setEnabled(true);
+    } else {
+        buttonss[1]->setEnabled(false);
+    }
+}
+
+void MainWindow::setbuttons3(bool disable){
+    if(disable){
+        buttonss[2]->setEnabled(true);
+    } else {
+        buttonss[2]->setEnabled(false);
+    }
+}
+
 void MainWindow::ShowSubWindow(){
     LogInWindow.show();
 }

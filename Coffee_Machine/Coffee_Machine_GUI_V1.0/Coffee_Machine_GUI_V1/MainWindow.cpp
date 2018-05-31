@@ -234,7 +234,7 @@ void MainWindow::createHorizontalGroupBoxes()
 
     // HorizontalGroupBox 3 -----------------------------------------------------
 
-    buttonss[0] = new QPushButton();
+    buttonss[0] = new QPushButton("Drink 1");
     buttonss[1] = new QPushButton("Drink 2");
     buttonss[2] = new QPushButton("Drink 3");
     buttonss[3] = new QPushButton("Cancel");
@@ -242,7 +242,7 @@ void MainWindow::createHorizontalGroupBoxes()
     QVBoxLayout *layout3 = new QVBoxLayout;
 
     buttonss[0]->setFixedWidth(100);
-    QPixmap pixmap("coffee.png");
+    QPixmap pixmap("CoffeeDisplay.png");
     QIcon ButtonIcon(pixmap);
     buttonss[0]->setIcon(ButtonIcon);
     buttonss[0]->setIconSize(pixmap.rect().size());

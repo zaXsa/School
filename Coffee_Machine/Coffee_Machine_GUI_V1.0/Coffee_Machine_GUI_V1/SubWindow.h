@@ -19,6 +19,8 @@ class QMenu;
 class QMenuBar;
 class QPushButton;
 class QTextEdit;
+class MainWindow;
+class StateMachine;
 //QT_END_NAMESPACE
 class SubWindow: public QDialog
 {

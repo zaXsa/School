@@ -135,8 +135,12 @@ event_e StateMachine::as_wait_for_coins(){
 }
 
 event_e StateMachine::as_check_amount(){
-    pDialog->setLogger("\nAmount:\t"+QString::number(money)+"\nNeed:\t"+QString::number(DrinkPrice));
-    pDialog->setDisplay("Amount:\t"+QString::number(money)+"\nNeed:\t"+QString::number(DrinkPrice));
+    pDialog->setLogger("\nThe Drink you have selected is "+QString::fromStdString(DrinkType)
+                       +"\nAmount:\t"+QString::number(money)
+                       +"\nNeed:\t"+QString::number(DrinkPrice));
+    pDialog->setDisplay("The Drink you have selected is "+QString::fromStdString(DrinkType)
+                        +"\n---------------------------------------------------------\nAmount:\t"+QString::number(money)
+                        +"\nNeed:\t"+QString::number(DrinkPrice));
 
     if (money >= DrinkPrice) {
         return E_MONEY_ENOUGH;

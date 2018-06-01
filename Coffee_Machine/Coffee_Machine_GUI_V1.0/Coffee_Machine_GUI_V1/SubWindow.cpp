@@ -121,8 +121,8 @@ void SubWindow::setLogDisplay(const QString &text) {
 }
 
 void SubWindow::AddDrinks(){
-    AvailableAmount1 = 1;
-    AvailableAmount2 = 2;
+    AvailableAmount1 = 3;
+    AvailableAmount2 = 3;
     AvailableAmount3 = 3;
 }
 

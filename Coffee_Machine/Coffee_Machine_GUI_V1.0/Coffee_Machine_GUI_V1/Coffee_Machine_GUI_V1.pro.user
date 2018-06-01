@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.3.1, 2018-05-31T15:15:38. -->
+<!-- Written by QtCreator 4.3.1, 2018-06-01T13:21:56. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
-  <value type="QByteArray">{4041a0e4-18c5-42c8-8f82-3a4ea2a91882}</value>
+  <value type="QByteArray">{ebc4e3b6-b893-4417-b11e-f154b8aa51ac}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -285,8 +285,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Coffee_Machine_GUI_V1</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Coffee_Machine_GUI_V12</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/Renzo/Documents/GitHub/School/Coffee_Machine/Coffee_Machine_GUI_V1.0/Coffee_Machine_GUI_V1/Coffee_Machine_GUI_V1.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/renzo/Documents/GitHub/School/Coffee_Machine/Coffee_Machine_GUI_V1.0/Coffee_Machine_GUI_V1/Coffee_Machine_GUI_V1.pro</value>
     <value type="bool" key="QmakeProjectManager.QmakeRunConfiguration.UseLibrarySearchPath">true</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.CommandLineArguments"></value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">Coffee_Machine_GUI_V1.pro</value>

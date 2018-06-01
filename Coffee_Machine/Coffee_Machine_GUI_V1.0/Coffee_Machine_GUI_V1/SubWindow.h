@@ -25,7 +25,7 @@ class StateMachine;
 class SubWindow: public QDialog
 {
 Q_OBJECT // to make it possible to use events(SIGNAL)/event-handlers(SLOT)
-
+s
 public:
     SubWindow();
 

@@ -1,0 +1,83 @@
+@startuml
+
+'------------------------------------------------------------------ CVM - 1
+scale 1500 width
+[*] -down-> S_Initialised : E_Start / SetBacklog()
+
+S_Admin_Window -down-> S_Admin_Login : E_Pass_Name_Detected / Add_Drinks()
+S_Admin_Window --> S_Choose_Type
+S_Admin_Login -up-> S_Admin_Window
+
+S_Initialised --> S_Choose_Type : E_CONTINUE
+
+S_Choose_Type : A_Choose_Type()
+S_Choose_Type -down-> S_Drink_1 : E_Type_chosen_1
+S_Choose_Type -down-> S_Drink_2 : E_Type_chosen_2
+S_Choose_Type -down-> S_Drink_3 : E_Type_chosen_3
+S_Choose_Type -down-> S_Detect_Wrong : E_Wrong_Drink 
+S_Choose_Type -right-> S_Admin_Window
+
+S_Drink_1 --> S_WaitForCoins : E_Type_exists / Type_Price()
+S_Drink_1 --> S_Choose_Type : E_Out_of_Type / Empty()
+
+S_Drink_2 --> S_WaitForCoins : E_Type_exists / Type_Price()
+S_Drink_2 --> S_Choose_Type : E_Out_of_Type / Empty()
+
+S_Drink_3 --> S_WaitForCoins : E_Type_exists / Type_Price()
+S_Drink_3 --> S_Choose_Type : E_Out_of_Type / Empty()
+
+S_Detect_Wrong --> S_Choose_Type
+S_Detect_Wrong : display("Drink not found")
+
+S_WaitForCoins --> S_Detected_10C : E_10C
+S_Detected_10C : insertedMoney += 10
+S_Detected_10C : ChangeCoin10C++;
+S_Detected_10C --> S_WaitForCoins : E_NOT_ENOUGH
+S_Detected_10C --> S_Dispense_Drink : E_ENOUGH 
+
+S_WaitForCoins --> S_Detected_20C : E_20C
+S_Detected_20C : insertedMoney += 20
+S_Detected_20C : ChangeCoin20C++;
+S_Detected_20C --> S_WaitForCoins : E_NOT_ENOUGH
+S_Detected_20C --> S_Dispense_Drink : E_ENOUGH 
+
+S_WaitForCoins --> S_Detected_50C : E_50C
+S_Detected_50C : insertedMoney += 50
+S_Detected_50C : ChangeCoin50C++;
+S_Detected_50C --> S_WaitForCoins : E_NOT_ENOUGH
+S_Detected_50C --> S_Dispense_Drink : E_ENOUGH 
+
+S_WaitForCoins --> S_Detected_100C : E_100C
+S_Detected_100C : insertedMoney += 100
+S_Detected_100C : ChangeCoin100C++;
+S_Detected_100C --> S_WaitForCoins : E_NOT_ENOUGH
+S_Detected_100C --> S_Dispense_Drink : E_ENOUGH  
+
+S_WaitForCoins --> S_Detected_Wrong : E_WRONG_COIN 
+S_Detected_Wrong : Dispense_Coin()
+S_Detected_Wrong : DisplayCoinNotrecognised()
+S_Detected_Wrong --> S_WaitForCoins 
+
+S_WaitForCoins --> S_Cancel : E_Canceled
+S_Cancel : Choose()
+S_Cancel --> S_WaitForCoins : E_No
+S_Cancel --> S_Dispense_Change : E_Yes / Calculate_Return()
+
+S_Dispense_Change : Dispense_Change()
+S_Dispense_Change : Check_Drink()
+S_Dispense_Change : Check_Change()
+S_Dispense_Change : Write_Backlog()
+S_Dispense_Change -up-> S_Initialised : E_Part_Full_Drink / Change_Choice()
+
+S_Dispense_Drink : Dispense_Drink_Type()
+S_Dispense_Drink --> S_Dispense_Change : E_dispensed / Calculate_Change()
+
+note right of S_Initialised
+All subsystems in CVM initialised.
+end note
+
+note left of S_Initialised #red
+ All currency values in cents.
+end note
+
+@enduml

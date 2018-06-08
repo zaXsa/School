@@ -84,6 +84,7 @@ SubWindow::SubWindow(){
     //  xMax=XMAX.toDouble();
     //  std::stod(ui->lineEdit->text().toStdString());
 
+    subsubWindow();
     QGridLayout *layout = new QGridLayout();
 
     layout->addWidget(Logdisplay, 0, 0);
@@ -94,13 +95,17 @@ SubWindow::SubWindow(){
     gridGroupBox = new QGroupBox("Log-in screen");
     gridGroupBox->setLayout(layout);
 
-    QHBoxLayout *mainLayout = new QHBoxLayout;
+    gridGroupBox->setMinimumSize(300,200);
+
+    QVBoxLayout *mainLayout = new QVBoxLayout;
     mainLayout->addWidget(gridGroupBox);
+    mainLayout->addWidget(grindGroupBoxx2);
 
     setLayout(mainLayout);
 
     setWindowTitle(APPNAME_VERSION);
-    setFixedSize(300,200);
+
+    grindGroupBoxx2->hide();
 }
 
 void SubWindow::CheckName(){
@@ -124,9 +129,45 @@ void SubWindow::AddDrinks(){
     AvailableAmount1 = 3;
     AvailableAmount2 = 3;
     AvailableAmount3 = 3;
+
+    grindGroupBoxx2->show();
 }
 
+void SubWindow::subsubWindow(){
+    buttons[0] = new QPushButton("Add Drinks");
+    buttons[1] = new QPushButton("Remove Drinks");
+    buttons[2] = new QPushButton("Add Change");
+    buttons[3] = new QPushButton("Remove Change");
 
+    Drink = new QLineEdit();
+    Change = new QLineEdit();
+
+    QGridLayout *layout1 = new QGridLayout;
+
+    buttons[0]->setFixedWidth(100);
+
+    layout1->addWidget(buttons[0], 0, 0);
+    layout1->addWidget(buttons[1], 0, 1);
+    layout1->addWidget(buttons[2], 1, 0);
+    layout1->addWidget(buttons[3], 1, 1);
+    layout1->addWidget(Drink, 0, 2);
+    layout1->addWidget(Change, 1, 2);
+
+    //connect(buttons[0], SIGNAL(released()), this, SLOT(coin10C()));
+    //connect(buttons[1], SIGNAL(released()), this, SLOT(coin20C()));
+    //connect(buttons[2], SIGNAL(released()), this, SLOT(coin50C()));
+    //connect(buttons[3], SIGNAL(released()), this, SLOT(coin100C()));
+
+    buttons[0]->setEnabled(true);
+    buttons[1]->setEnabled(true);
+    buttons[2]->setEnabled(true);
+    buttons[3]->setEnabled(true);
+    QApplication::processEvents();
+
+
+    grindGroupBoxx2 = new QGroupBox("Add/Remove window");
+    grindGroupBoxx2->setLayout(layout1);
+}
 
 
 

@@ -25,7 +25,7 @@ class StateMachine;
 class SubWindow: public QDialog
 {
 Q_OBJECT // to make it possible to use events(SIGNAL)/event-handlers(SLOT)
-s
+
 public:
     SubWindow();
 
@@ -36,9 +36,15 @@ public:
     QGroupBox *gridGroupBox;
 
     void setLogDisplay(const QString& text);
-    void AddDrinks();
+    void AddDrinks(void);
+    void subsubWindow(void);
 private:
     QGroupBox *VerticalGroup1;
+    QPushButton *buttons[4];
+    QGroupBox *grindGroupBoxx2;
+
+    QLineEdit *Drink;
+    QLineEdit *Change;
 private slots:
     void CheckName();
 };

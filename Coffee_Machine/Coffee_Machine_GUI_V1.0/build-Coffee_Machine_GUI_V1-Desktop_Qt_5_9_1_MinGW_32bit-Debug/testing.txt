@@ -7576,4 +7576,37 @@ change is: 0 cents
 -state: Wait for drink-state (with event): Start
 -state: Init
 -state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start-state (with event): Start-state (with event): Start-state (with event): Start-state (with event): Start-state (with event): Start-state (with event): Start-state (with event): Start-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start-state (with event): Start-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
+-state: Wait for drink-state (with event): Start
+-state: Init
+-state (with event): Init
 -state: Wait for drink

@@ -2,6 +2,7 @@
 #include "StateMachine.h"
 
 #include <unistd.h>
+#include <string>
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -12,6 +13,7 @@ extern int AvailableAmount3;
 //********************* Mealy Actions
 
 void StateMachine::ReadFile(){
+    pDialog->LogInWindow.SetAdmin();
     string Word;
     int i = 0;
     string fileName;
@@ -20,13 +22,13 @@ void StateMachine::ReadFile(){
     while(AdminFile >> Word){
         switch(i){
         case 2:
-            AvailableAmount1 = std::stoi(Word);
+           AvailableAmount1 = std::stoi(Word);
             break;
         case 3:
-            AvailableAmount2 = std::stoi(Word);
+           AvailableAmount2 = std::stoi(Word);
             break;
         case 4:
-            AvailableAmount3 = std::stoi(Word);
+           AvailableAmount3 = std::stoi(Word);
             break;
         default:
             break;

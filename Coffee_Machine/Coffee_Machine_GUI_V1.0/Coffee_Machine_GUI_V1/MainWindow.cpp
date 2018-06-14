@@ -1,3 +1,4 @@
+
 /****************************************************************************
 **
 ** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
@@ -199,11 +200,11 @@ void MainWindow::createMenu()
 
     exitAction = fileMenu->addAction("E&xit");//(4)
     connect(exitAction, SIGNAL(triggered()), this, SLOT(accept()));
-    exitAction2 = fileMenu->addAction("Log-in(WIP");//(4)
+    exitAction2 = fileMenu->addAction("Log-in(WIP)");//(4)
     connect(exitAction2, SIGNAL(triggered()), this, SLOT(Loging()));
-    exitAction3 = fileMenu->addAction("Toggle Logger(WIP");//(4)
+    exitAction3 = fileMenu->addAction("Toggle Logger(WIP)");//(4)
     connect(exitAction3, SIGNAL(triggered()), this, SLOT(ToggleLogger()));
-    exitAction4 = fileMenu->addAction("Toggle Extra Buttons (WIP");//(4)
+    exitAction4 = fileMenu->addAction("Toggle Extra Buttons (WIP)");//(4)
     connect(exitAction4, SIGNAL(triggered()), this, SLOT(ToggleExtra()));
 }
 

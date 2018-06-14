@@ -122,9 +122,9 @@ SubWindow::SubWindow(){
 }
 
 SubWindow::~SubWindow() {
+    UpdateFile();
     Name->clear();
     Pass->clear();
-    UpdateFile();
 }
 
 void SubWindow::UpdateDisplay(){

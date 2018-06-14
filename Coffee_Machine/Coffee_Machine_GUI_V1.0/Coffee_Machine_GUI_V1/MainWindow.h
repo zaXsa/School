@@ -75,6 +75,7 @@ public:
     void setbuttons3(bool disable);
     void ShowSubWindow();
 
+    SubWindow LogInWindow;
 private:
     void createMenu();
     void createHorizontalGroupBoxes();
@@ -116,8 +117,6 @@ private:
     event_e event;
 
     ofstream file1;
-
-    SubWindow LogInWindow;
 private slots:
     void Loging();
     void ToggleLogger();

@@ -11,7 +11,33 @@ extern int AvailableAmount2;
 extern int AvailableAmount3;
 //********************* Mealy Actions
 
+void StateMachine::ReadFile(){
+    string Word;
+    int i = 0;
+    string fileName;
+    fileName = "Admin.txt";
+    AdminFile.open(fileName.c_str());
+    while(AdminFile >> Word){
+        switch(i){
+        case 2:
+            AvailableAmount1 = std::stoi(Word);
+            break;
+        case 3:
+            AvailableAmount2 = std::stoi(Word);
+            break;
+        case 4:
+            AvailableAmount3 = std::stoi(Word);
+            break;
+        default:
+            break;
+        }
+        i++;
+    }
+    AdminFile.close();
+}
+
 state_e StateMachine::ae_start(){
+    ReadFile();
     return S_INIT;
 }
 

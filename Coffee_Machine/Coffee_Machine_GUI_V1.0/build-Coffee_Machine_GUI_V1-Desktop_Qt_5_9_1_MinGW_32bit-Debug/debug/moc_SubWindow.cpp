@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_SubWindow_t {
-    QByteArrayData data[3];
-    char stringdata0[21];
+    QByteArrayData data[8];
+    char stringdata0[78];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,10 +33,17 @@ static const qt_meta_stringdata_SubWindow_t qt_meta_stringdata_SubWindow = {
     {
 QT_MOC_LITERAL(0, 0, 9), // "SubWindow"
 QT_MOC_LITERAL(1, 10, 9), // "CheckName"
-QT_MOC_LITERAL(2, 20, 0) // ""
+QT_MOC_LITERAL(2, 20, 0), // ""
+QT_MOC_LITERAL(3, 21, 9), // "AddDrinks"
+QT_MOC_LITERAL(4, 31, 12), // "RemoveDrinks"
+QT_MOC_LITERAL(5, 44, 9), // "AddChange"
+QT_MOC_LITERAL(6, 54, 12), // "RemoveChange"
+QT_MOC_LITERAL(7, 67, 10) // "GetUpdated"
 
     },
-    "SubWindow\0CheckName\0"
+    "SubWindow\0CheckName\0\0AddDrinks\0"
+    "RemoveDrinks\0AddChange\0RemoveChange\0"
+    "GetUpdated"
 };
 #undef QT_MOC_LITERAL
 
@@ -46,7 +53,7 @@ static const uint qt_meta_data_SubWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -54,9 +61,19 @@ static const uint qt_meta_data_SubWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x08 /* Private */,
+       1,    0,   44,    2, 0x08 /* Private */,
+       3,    0,   45,    2, 0x08 /* Private */,
+       4,    0,   46,    2, 0x08 /* Private */,
+       5,    0,   47,    2, 0x08 /* Private */,
+       6,    0,   48,    2, 0x08 /* Private */,
+       7,    0,   49,    2, 0x08 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -69,6 +86,11 @@ void SubWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->CheckName(); break;
+        case 1: _t->AddDrinks(); break;
+        case 2: _t->RemoveDrinks(); break;
+        case 3: _t->AddChange(); break;
+        case 4: _t->RemoveChange(); break;
+        case 5: _t->GetUpdated(); break;
         default: ;
         }
     }
@@ -100,13 +122,13 @@ int SubWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 6)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 1;
+        _id -= 6;
     }
     return _id;
 }

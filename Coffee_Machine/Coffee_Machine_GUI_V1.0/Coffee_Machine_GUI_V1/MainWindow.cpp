@@ -183,6 +183,11 @@ void MainWindow::setbuttons3(bool disable){
 }
 
 void MainWindow::ShowSubWindow(){
+    LogInWindow.gridGroupBox->show();
+    LogInWindow.grindGroupBoxx2->hide();
+    LogInWindow.Logdisplay->setFixedSize(250,30);
+    LogInWindow.setFixedSize(300,200);
+    LogInWindow.setLogDisplay("Please enter name and password");
     LogInWindow.show();
 }
 

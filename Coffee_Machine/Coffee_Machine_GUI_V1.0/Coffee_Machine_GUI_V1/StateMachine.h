@@ -19,12 +19,14 @@ public:
         pDialog(pDialo),currentState(S_START){}
 
     void handleEvent(event_e eventIn);
+    void ReadFile(void);
 
 private:
     MainWindow *pDialog;
     state_e currentState;
 
     int money;
+    fstream AdminFile;
 
     std::string DrinkType;
     string DrinkAvailable1 = "Drink 1 is available";

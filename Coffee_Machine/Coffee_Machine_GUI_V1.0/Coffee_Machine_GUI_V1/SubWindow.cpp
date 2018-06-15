@@ -277,7 +277,6 @@ void SubWindow::subsubWindow(){
     connect(buttons[1], SIGNAL(released()), this, SLOT(RemoveDrinks()));
     connect(buttons[2], SIGNAL(released()), this, SLOT(AddChange()));
     connect(buttons[3], SIGNAL(released()), this, SLOT(RemoveChange()));
-    connect(buttons[4], SIGNAL(released()), this, SLOT(RemoveChange()));
     connect(buttons[4], SIGNAL(released()), this, SLOT(GetUpdated()));
 
     buttons[0]->setEnabled(true);
@@ -293,7 +292,11 @@ void SubWindow::subsubWindow(){
 
 void SubWindow::UpdateFile(){
     AdminFile.open("Admin.txt");
-    AdminFile << AdminNamed.toStdString() << " " << AdminPassed.toStdString() << " " << AvailableAmount1 << " " << AvailableAmount2 << " " << AvailableAmount3 << endl;
+    AdminFile << AdminNamed.toStdString() << " " << AdminPassed.toStdString()
+              << " " << AvailableAmount1 << " " << AvailableAmount2
+              << " " << AvailableAmount3 << " " <<AvailableChange1
+              << " " <<AvailableChange2 << " " <<AvailableChange3
+              << " " <<AvailableChange4 << endl;
     AdminFile.close();
 }
 

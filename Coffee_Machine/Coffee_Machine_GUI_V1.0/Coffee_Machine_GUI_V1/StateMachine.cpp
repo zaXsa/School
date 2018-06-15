@@ -10,6 +10,12 @@ using namespace std;
 extern int AvailableAmount1;
 extern int AvailableAmount2;
 extern int AvailableAmount3;
+
+extern int AvailableChange1;
+extern int AvailableChange2;
+extern int AvailableChange3;
+extern int AvailableChange4;
+extern int AvailableChange5;
 //********************* Mealy Actions
 
 void StateMachine::ReadFile(){
@@ -29,6 +35,18 @@ void StateMachine::ReadFile(){
             break;
         case 4:
            AvailableAmount3 = std::stoi(Word);
+            break;
+        case 5:
+           AvailableChange1 = std::stoi(Word);
+            break;
+        case 6:
+           AvailableChange2 = std::stoi(Word);
+            break;
+        case 7:
+           AvailableChange3 = std::stoi(Word);
+            break;
+        case 8:
+           AvailableChange4 = std::stoi(Word);
             break;
         default:
             break;
